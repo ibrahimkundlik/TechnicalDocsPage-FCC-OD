@@ -1,0 +1,111 @@
+body, h1, h2, p, ul, li, aside, article{
+	padding: 0;
+	margin: 0;
+}
+body{
+	overflow-y: hidden;
+	font-family: 'Open Sans',Arial,sans-serif;
+    line-height: 1.5;
+    background: url('images/back2.png');
+}
+h2{
+	text-decoration: underline;
+	padding: 10px 0 10px 0;
+}
+h1{
+	margin-top: 8px;
+}
+p, code{
+	padding: 10px 0 10px 0;
+}
+code{
+	background: #f1e3e3;
+	border-radius: 5px;
+	padding: 5px;
+}
+article{
+	margin-bottom: 15px;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+#main-head{
+	display: grid;
+	grid-template-columns: 7% 90%;
+	background: #39cfde;
+	height: 60px;
+}
+#main-cont{
+	display: grid;
+	grid-template-columns: 20% 80%;
+}
+.menu-icon{
+	text-align: center;
+	font-size: 25px;
+}
+.fa-bars{
+	display: none;
+	margin: 20px 5px 0 5px;
+}
+.sect-list{
+	list-style: none;
+	text-align: center;
+	padding: 5px 0 5px 5px;
+	overflow-y: scroll;
+	height: calc(100vh - 60px);
+	font-size: 20px;
+}
+.dd-list{
+	border-bottom: 1px solid black;
+	box-shadow: 0px 3px 3px gray;
+	padding: 15px;
+}
+.text-cont{
+	overflow-y: scroll;
+	height: calc(100vh - 50px);
+	padding-left: 15px;
+	border-left: 4px solid gray;
+}
+@media screen and (max-width: 780px) and (min-width: 620px){
+	.sect-list{
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 619px){
+	body{
+		font-size: 13px;
+	}
+	#main-head{
+		font-size: 10px;
+		vertical-align: middle;
+	}
+	h1{
+		padding: 10px;
+	}
+	.fa-bars{
+		display: block;
+	}
+	#main-cont{
+		display: flex;
+		flex-direction: row;
+		flex-flow: wrap;
+		justify-content: space-around;
+	}
+	.sect-list{
+		position: absolute;
+		left: 0;
+		width: 40%;
+		height: 50%;
+		z-index: 2;
+		background: #ebeced;
+		font-size: 11px;
+	}
+	.text-cont{
+		width: 100%;
+	}
+	.menu-hidden{
+		display: none;
+	}
+
+}
